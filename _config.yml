@@ -83,11 +83,11 @@ author:
   name             : "Logan Laurer"
   avatar           : "profile.png"
   bio              : "IT guru"
-  location         : "Columbus, Ohio"
+  location         : "Columbus Ohio"
   employer         :
   pubmed           :
   googlescholar    : 
-  email            : "1obot@pm.me"
+  email            : 
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -107,7 +107,7 @@ author:
   pinterest        :
   soundcloud       :
   stackoverflow    : # http://stackoverflow.com/users/123456/username
-  steam            : "https://steamcommunity.com/id/djlol0"
+  steam            : "https://www.steamcommunity.com/id/djlol0"
   tumblr           :
   twitter          : "dj1o1o"
   vine             :
