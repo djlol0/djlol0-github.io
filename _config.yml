@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Logan Laurer"
   avatar           : "profile.png"
-  bio              : "  IT Guru"
+  bio              : "  IT Padawan"
   location         : "Columbus Ohio"
   employer         :
   pubmed           :
@@ -91,7 +91,7 @@ author:
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
-  codepen          :
+  tryhackme        : "https://tryhackme.com/p/djlolo"
   dribbble         :
   flickr           :
   facebook         : "https://www.facebook.com/logan.laurer"
