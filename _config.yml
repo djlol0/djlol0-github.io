@@ -233,6 +233,8 @@ timezone: America/Detroit # http://en.wikipedia.org/wiki/List_of_tz_database_tim
 
 
 # Plugins
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
