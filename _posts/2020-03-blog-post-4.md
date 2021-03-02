@@ -1,14 +1,14 @@
 ---
 title: 'Installing Kali Linux on VMWare                                                    '
 date: 2020-03-01
-permalink: /posts/2021/03/blog-post-4/
+permalink: /posts/2020/03/blog-post-4/
 tags:
   - Kali
 
 ---
 # Kali and VMWare
 
-![Kali and VMWare](/images/Kali/Kali.png)
+![Kali](/images/Kali/kali.png)
 
 Kali Linux is the mostly referred to as the hacker distro of choice, it contains an immense amount of tools needed to conduct penetration tests. Most of the time, you do not want this dedicated to portions of your HDD/SDD as they can be unstable. The best way to do this is via virtual machines, which are designed to virtualize the environment for ease of use. 
 
