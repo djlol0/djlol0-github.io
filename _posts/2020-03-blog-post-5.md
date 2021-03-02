@@ -1,7 +1,7 @@
 ---
 title: 'Installing Kali Linux on VMWare'
 date: 2020-03-01
-permalink: /blog/posts/2020/03/blog-post-4/
+permalink: /posts/2020/03/blog-post-5/
 tags:
   - Kali
 
