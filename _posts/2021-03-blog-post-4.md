@@ -1,27 +1,27 @@
 ---
 title: 'Installing Kali Linux on VMWare                                                    '
 date: 2020-03-01
-permalink: /posts/InstallingKaliLinuxVMWare/
+permalink: /posts/2021/03/blog-post-4/
 tags:
   - Kali
 
 ---
-#Kali and VMWare
+# Kali and VMWare
 
-![Kali](/images/Kali/Kali.png)
+![Kali and VMWare](/images/Kali/Kali.png)
 
 Kali Linux is the mostly referred to as the hacker distro of choice, it contains an immense amount of tools needed to conduct penetration tests. Most of the time, you do not want this dedicated to portions of your HDD/SDD as they can be unstable. The best way to do this is via virtual machines, which are designed to virtualize the environment for ease of use. 
 
-#Downloads
+# Downloads
 
 * Head to [VMWare](https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html) and install their workstation player for our VM.
 * Download the Kali ISO image from their [website](https://www.kali.org/downloads/)
 
-#Install
+# Install
 
 Now that we have both components to set up our virtual machine, all we have to do is select "Create New Virtual Machine" from VMWare Workstation.
 
-(/images/Kali/AddNew.png)
+![Install1](/images/Kali/AddNew.png)
 
 Here we will browse and select the Kali ISO image we installed earlier.
 
@@ -34,7 +34,7 @@ The rest of the selections are fine as default, and now most of the work is done
 > A couple things to note, it is easiest to download and use entire disk (allocating all files in a single partition). Make sure to select 'Yes' for network mirror and GRUB boot loader. Lastly, /dev/sda can be used for the boot loader installation.
 > 
 
-#Viola!
+# Viola!
 
 We now have a virtual machine running Kali Linux. We can pause or run this instance as we please, I will discuss optimizing this image in upcoming posts.
 
