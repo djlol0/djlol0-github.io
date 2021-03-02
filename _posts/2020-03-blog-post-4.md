@@ -1,5 +1,5 @@
 ---
-title: 'Installing Kali Linux on VMWare                                                    '
+title: 'Installing Kali Linux on VMWare'
 date: 2020-03-01
 permalink: /posts/2020/03/blog-post-4/
 tags:
