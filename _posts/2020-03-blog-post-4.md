@@ -21,7 +21,7 @@ Kali Linux is the mostly referred to as the hacker distro of choice, it contains
 
 Now that we have both components to set up our virtual machine, all we have to do is select "Create New Virtual Machine" from VMWare Workstation.
 
-![Install1](/images/Kali/AddNew.png)
+![Install1](/images/Kali/Addnew.png)
 
 Here we will browse and select the Kali ISO image we installed earlier.
 
