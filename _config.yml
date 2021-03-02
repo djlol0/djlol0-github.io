@@ -187,12 +187,15 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: post
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
+      - 
+         label: Posts
+         url: /
   # _pages
   - scope:
       path: ""
