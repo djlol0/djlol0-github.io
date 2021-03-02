@@ -6,8 +6,10 @@ tags:
   
 ---
 
-What is Greenshot?
-=========
+What is Greenshot?...
+
+# What is Greenshot? 
+
 ![Greenshot](/images/Greenshot/icon)
 
 From their [website](https://getgreenshot.org/) ->
@@ -18,8 +20,7 @@ Export the screenshot in various ways: save to file, send to printer, copy to cl
 >
 
 
-Why use Greenshot
-=================
+# Why use Greenshot
 
 Greenshot has been a life saver recently, especially during my new venture writing about my cybersec journey. You can easily capture portions of your screen (or the entire region) if you desire. 
 
@@ -31,8 +32,7 @@ What really sets this program apart from other similiar software is its' ability
 
 Best part out of all of this is that it is open-source! 
 
-Download
-========
+# Download
 
 Head over to [greenshot]https://getgreenshot.org/ to download and check out more about the program. 
 
