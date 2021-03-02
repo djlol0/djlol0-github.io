@@ -20,7 +20,7 @@ Export the screenshot in various ways: save to file, send to printer, copy to cl
 >
 
 
-# Why use Greenshot
+# Why use Greenshot?
 
 Greenshot has been a life saver recently, especially during my new venture writing about my cybersec journey. You can easily capture portions of your screen (or the entire region) if you desire. 
 
