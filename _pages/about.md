@@ -1,12 +1,15 @@
 ---
 permalink: /
-title: "About me"
+title: "Hello there."
 excerpt: "About me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+
+About me
+--------
 
 > Your focus determines your reality. – Qui-Gon Jinn
 
