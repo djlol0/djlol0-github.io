@@ -122,7 +122,8 @@ Stop + restart service to gain escalation.
 
 I forgot to show this earlier, but at some point before we restart the ASCS9 service we need to start up a netcat listener to wait for the payload.
 > We catch a signal from the executed binary we uploaded
-![revshell](/images/THM/SteelMountain/revshell)
+
+![revshell](/images/THM/SteelMountain/revshell.png)
 
 Search for the root flag .../
 
