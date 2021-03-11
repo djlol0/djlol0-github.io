@@ -11,7 +11,7 @@ Steel Mountian...
 
 First we deploy the machine instance. Now let us get an idea of how it is structured.
 
-![Task 1a](/images/THM/SteelMountain/initialnmap)
+![Task 1a](/images/THM/SteelMountain/initialnmap.png)
 
 Let's look at the results.
 
@@ -64,7 +64,7 @@ And the Host script results:
    
 That is a lot of info to digest, so lets look at what ports are open. Http seems to be open on 10.10.2.233.
 
-![Task 1b](/images/THM/SteelMountain/webpage)
+![Task 1b](/images/THM/SteelMountain/webpage.png)
 
 We see that this guy is employee of the month, but what if you've never seen Mr.Robot? (Said no one). 
 There has to be something hiding, lets check the page source. Upon checking you see the name of the employee as a png.
@@ -74,19 +74,19 @@ There has to be something hiding, lets check the page source. Upon checking you 
 We have already scanned the machine with nmap, and we see there is another web server running.
 After looking in the page source of this page we have found the vendor of the file server.
 
-![Task 2](/images/THM/SteelMountain/fileserver)
+![Task 2](/images/THM/SteelMountain/fileserver.png)
 
 Let us search this in msfconsole.
 
-![Task 2a](/images/THM/SteelMountain/searchrejetto)
+![Task 2a](/images/THM/SteelMountain/searchrejetto.png)
 
 Set our options for current IP config.
 
-![Task 2b](/images/THM/SteelMountain/rejettooptions)
+![Task 2b](/images/THM/SteelMountain/rejettooptions.png)
 
 Shell into the machine and look for the first flag.
 
-![Task 2c](/images/THM/SteelMountain/billflag)        
+![Task 2c](/images/THM/SteelMountain/billflag.png)        
 
 # [Task 3] - Priv Esc 
 
@@ -104,13 +104,13 @@ Load powershell../
 > ..\PowerUp.ps1 to get into PowerUp directory 
 > Run Invoke-AllChecks
 
-![ASC](/images/THM/SteelMountain/ASCS9)
+![ASC](/images/THM/SteelMountain/ASCS9.png)
 
 Since the CanRestart option is true, we can restart a service and the directory to the app is also writeable. All in all meaning we can replace the previous application with our own malicious one. Then we stop and restart the service for it to execute. 
 
 Now we generate our payload.
 
-![payload](/images/THM/SteelMountain/payload)
+![payload](/images/THM/SteelMountain/payload.png)
 
 Let us upload our binary and replace the legit one.
 
@@ -118,7 +118,7 @@ Let us upload our binary and replace the legit one.
 
 Stop + restart service to gain escalation.
 
-![stopstart](/images/THM/SteelMountain/stopstart)
+![stopstart](/images/THM/SteelMountain/stopstart.png)
 
 I forgot to show this earlier, but at some point before we restart the ASCS9 service we need to start up a netcat listener to wait for the payload.
 > We catch a signal from the executed binary we uploaded
@@ -126,10 +126,11 @@ I forgot to show this earlier, but at some point before we restart the ASCS9 ser
 
 Search for the root flag .../
 
-![rootflag](/images/THM/SteelMountain/rootflag)
+![rootflag](/images/THM/SteelMountain/rootflag.png)
 
 # What I learned
 * Enumerate all ports when scanning, almost missed 8080 in this case
 * If there is a Metasploit module for it, it can be done manually as well
 * Read through exploits/scripts before deploying
+* When I am uploading images to my website, include the .png tag
 
