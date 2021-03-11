@@ -5,7 +5,7 @@ tags:
   - TryHackMe
 
 ---  
-Steel Mountian...
+Steel Mountain.../
 
 # [Task 1] - Recon
 
