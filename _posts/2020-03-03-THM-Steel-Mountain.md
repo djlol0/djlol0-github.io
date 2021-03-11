@@ -9,11 +9,9 @@ Steel Mountian...
 
 # [Task 1] - Recon
 
-![Task 1]()
-
 First we deploy the machine instance. Now let us get an idea of how it is structured.
 
-![Task 1a]()
+![Task 1a](/images/THM/SteelMountain/initialnmap)
 
 Let's look at the results.
 
@@ -45,7 +43,7 @@ Let's look at the results.
     49156/tcp open  msrpc              Microsoft Windows RPC
     49163/tcp open  msrpc              Microsoft Windows RPC
     Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
-    '''
+    '''    
     
 And the Host script results: 
 
@@ -66,7 +64,7 @@ And the Host script results:
    
 That is a lot of info to digest, so lets look at what ports are open. Http seems to be open on 10.10.2.233.
 
-![Task 1b]()
+![Task 1b](/images/THM/SteelMountain/webpage)
 
 We see that this guy is employee of the month, but what if you've never seen Mr.Robot? (Said no one). 
 There has to be something hiding, lets check the page source. Upon checking you see the name of the employee as a png.
@@ -74,6 +72,64 @@ There has to be something hiding, lets check the page source. Upon checking you 
 # [Task 2] - Gain Access
 
 We have already scanned the machine with nmap, and we see there is another web server running.
-After looking in the page source we have found the vendor of the file server.
+After looking in the page source of this page we have found the vendor of the file server.
 
+![Task 2](/images/THM/SteelMountain/fileserver)
+
+Let us search this in msfconsole.
+
+![Task 2a](/images/THM/SteelMountain/searchrejetto)
+
+Set our options for current IP config.
+
+![Task 2b](/images/THM/SteelMountain/rejettooptions)
+
+Shell into the machine and look for the first flag.
+
+![Task 2c](/images/THM/SteelMountain/billflag)        
+
+# [Task 3] - Priv Esc 
+
+Now since we have an inital shell as Bill, we will try to further enumerate and escalate our priv to root.
+
+> PowerUp is used as a 'clearinghouse' of common Windows priv escalation vectors that rely on misconfigurations.
+
+Download the [script here](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1).
+
+Uploading.../
+Load powershell../
+
+![loadps](/images/THM/SteelMountain/loadps.png)
+
+> ..\PowerUp.ps1 to get into PowerUp directory 
+> Run Invoke-AllChecks
+
+![ASC](/images/THM/SteelMountain/ASCS9)
+
+Since the CanRestart option is true, we can restart a service and the directory to the app is also writeable. All in all meaning we can replace the previous application with our own malicious one. Then we stop and restart the service for it to execute. 
+
+Now we generate our payload.
+
+![payload](/images/THM/SteelMountain/payload)
+
+Let us upload our binary and replace the legit one.
+
+![upload](/images/THM/SteelMountain/upload.png)
+
+Stop + restart service to gain escalation.
+
+![stopstart](/images/THM/SteelMountain/stopstart)
+
+I forgot to show this earlier, but at some point before we restart the ASCS9 service we need to start up a netcat listener to wait for the payload.
+> We catch a signal from the executed binary we uploaded
+![revshell](/images/THM/SteelMountain/revshell)
+
+Search for the root flag .../
+
+![rootflag](/images/THM/SteelMountain/rootflag)
+
+# What I learned
+* Enumerate all ports when scanning, almost missed 8080 in this case
+* If there is a Metasploit module for it, it can be done manually as well
+* Read through exploits/scripts before deploying
 
